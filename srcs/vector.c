@@ -35,17 +35,6 @@ t_vector	*vector_init(size_t init_size)
 
 void	vector_destroy(t_vector *vec)
 {
-//	size_t	i;
-//
-//	i = 0;
-//	if (sizeof(CONTENT) == sizeof(char*))
-//	{
-//		while (i < vec->size)
-//		{
-//			free(vec->arr[i]);
-//			++i;
-//		}
-//	}
 	free(vec->arr);
 	free(vec);
 }
@@ -61,14 +50,10 @@ void	vector_pushback(t_vector *vec, CONTENT item)
 	++vec->size;
 }
 
-//static void	delete_pos(t_vector *vec, size_t pos)
 void	vector_delete_bypos(t_vector *vec, size_t pos)
 {
 	if (pos >= vec->size)
 		return;
-	//if it is a pointer, free it?
-//	if (sizeof(CONTENT) == sizeof(char*))
-//		free(vec->arr[pos]);
 	while (pos < vec->size)
 	{
 		vec->arr[pos] = vec->arr[pos + 1];
