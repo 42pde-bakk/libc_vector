@@ -1,5 +1,5 @@
 NAME = libc_vector.a
-INCLUDE = -Iinclude -Ilibft/include
+INCLUDE = -Iinclude -Iinclude_internal -Ilibft/include
 
 SRC_DIR = ./srcs
 FILES = vector utils
