@@ -27,6 +27,8 @@ t_vector	*vector_init(size_t init_size)
 {
 	t_vector	*vec;
 
+	if (init_size == 0)
+		init_size = 1;
 	vec = calloc_wrapper(1, sizeof(t_vector));
 	vec->capacity = init_size;
 	vec->arr = calloc_wrapper(init_size + 1, sizeof(CONTENT));

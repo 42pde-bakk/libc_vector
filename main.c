@@ -4,12 +4,14 @@
 
 #include "vector.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 int fakemain(void) {
 	t_vector	*vec;
 	int i = 0;
 
-	vec = vector_init(10);
+	vec = vector_init(0);
 	while (i < 30) {
 		vector_pushback(vec, i);
 		++i;
