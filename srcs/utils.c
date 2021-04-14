@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include "libft.h"
 
-void	fatal_error(const char* s)
+void	fatal_error(const char *s)
 {
 	ft_putendl_fd(s, STDERR_FILENO);
 	exit(EXIT_FAILURE);
@@ -14,7 +14,7 @@ void	fatal_error(const char* s)
 
 void	*malloc_wrapper(size_t size)
 {
-	void *out;
+	void	*out;
 
 	out = malloc(size);
 	if (!out)

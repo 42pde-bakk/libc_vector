@@ -3,7 +3,7 @@
 //
 
 #include "vector.h"
-#include "utils.h"
+#include "../include_internal/utils.h"
 #include <stdlib.h>
 
 static void	vector_realloc(t_vector *vec, size_t newsize)
@@ -41,11 +41,10 @@ void	vector_destroy(t_vector *vec)
 	free(vec);
 }
 
-#include <stdio.h>
-
 void	vector_pushback(t_vector *vec, CONTENT item)
 {
-	if (vec->size == vec->capacity) {
+	if (vec->size == vec->capacity)
+	{
 		vector_realloc(vec, vec->capacity * 2);
 	}
 	vec->arr[vec->size] = item;
@@ -55,13 +54,15 @@ void	vector_pushback(t_vector *vec, CONTENT item)
 void	vector_delete_bypos(t_vector *vec, size_t pos)
 {
 	if (pos >= vec->size)
-		return;
+		return ;
 	while (pos < vec->size)
 	{
 		vec->arr[pos] = vec->arr[pos + 1];
 		++pos;
 	}
 }
+
+// finds the first occurence of item and deletes it
 
 void	vector_delete_byval(t_vector *vec, CONTENT item)
 {
@@ -73,7 +74,7 @@ void	vector_delete_byval(t_vector *vec, CONTENT item)
 		if (vec->arr[pos] == item)
 		{
 			vector_delete_bypos(vec, pos);
-			return;
+			return ;
 		}
 	}
 }
