@@ -35,13 +35,6 @@ t_vector	*vector_init(size_t init_size)
 	return (vec);
 }
 
-void	vector_destroy(t_vector *vec)
-{
-	free(vec->arr);
-	vec->arr = NULL;
-	free(vec);
-}
-
 void	vector_pushback(t_vector *vec, CONTENT item)
 {
 	if (vec->size == vec->capacity)
@@ -50,35 +43,4 @@ void	vector_pushback(t_vector *vec, CONTENT item)
 	}
 	vec->arr[vec->size] = item;
 	++vec->size;
-}
-
-void	vector_delete_bypos(t_vector *vec, size_t pos)
-{
-	if (pos >= vec->size)
-		return ;
-	while (pos < vec->size)
-	{
-		vec->arr[pos] = vec->arr[pos + 1];
-		++pos;
-	}
-	--vec->size;
-}
-
-// finds the first occurence of item and deletes it
-// right now only works for ints and chars, not strings
-
-void	vector_delete_byval(t_vector *vec, CONTENT item)
-{
-	size_t	pos;
-
-	pos = 0;
-	while (pos < vec->size)
-	{
-		if (vec->arr[pos] == item)
-		{
-			vector_delete_bypos(vec, pos);
-			return ;
-		}
-		++pos;
-	}
 }
