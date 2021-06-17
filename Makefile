@@ -21,6 +21,9 @@ ifdef DEBUG
 else
  CFLAGS += -Ofast
 endif
+ifdef CONTENT
+ CFLAGS += -D CONTENT=$(CONTENT)
+endif
 SHELL := /bin/bash
 export SHELL
 
@@ -47,6 +50,12 @@ fclean: clean
 
 re: fclean all
 
-test: re
-	$(CC) $(CFLAGS) $(INCLUDE) main.c $(NAME) -o libc_vector_test.out
+test_int: re
+	$(CC) $(CFLAGS) $(INCLUDE) test/main.c $(NAME) -o libc_vector_test.out
+	./libc_vector_test.out
+
+test_string: CFLAGS += -D CONTENT='char*'
+test_string: re
+	echo "cflags is $(CFLAGS)"
+	$(CC) $(CFLAGS) $(INCLUDE) test/main_string.c $(NAME) -o libc_vector_test.out
 	./libc_vector_test.out

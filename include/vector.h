@@ -6,7 +6,9 @@
 # define VECTOR_H
 # include <stdlib.h>
 
-# define CONTENT int
+# ifndef CONTENT
+#  define CONTENT int
+# endif
 
 typedef struct s_vector
 {
