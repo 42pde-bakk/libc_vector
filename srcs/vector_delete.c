@@ -2,6 +2,8 @@
 // Created by peerdebakker on 17-06-21.
 //
 
+#include "vector.h"
+
 void	vector_destroy(t_vector *vec)
 {
 	free(vec->arr);
