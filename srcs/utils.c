@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include "libft.h"
 
-void	fatal_error(const char *s)
+static void	fatal_error(const char *s)
 {
 	ft_putendl_fd(s, STDERR_FILENO);
 	exit(EXIT_FAILURE);
