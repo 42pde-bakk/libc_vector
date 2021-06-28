@@ -2,7 +2,7 @@ NAME = libc_vector.a
 INCLUDE = -Iinclude -Ilibft/include
 
 SRC_DIR = ./srcs
-FILES = vector utils
+FILES = vector utils vector_delete
 SRCS = $(addprefix $(SRC_DIR)/, $(addsuffix .c, $(FILES)))
 OBJS = $(SRCS:.c=.o)
 
