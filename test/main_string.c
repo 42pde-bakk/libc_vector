@@ -9,10 +9,10 @@
 
 int	fakemain(void)
 {
-	static char*const	strs[] = {
+	static char *const	strs[] = {
 			"RA", "RB", "SA", "SB", "SSA", "SSB"
 	};
-	t_vector*			vec;
+	t_vector			*vec;
 	int					i;
 
 	i = 0;

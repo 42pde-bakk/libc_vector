@@ -9,7 +9,7 @@
 
 int	fakemain(void)
 {
-	t_vector*	vec;
+	t_vector	*vec;
 	int			i;
 
 	i = 0;
