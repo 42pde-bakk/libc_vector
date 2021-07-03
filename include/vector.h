@@ -24,4 +24,6 @@ void		vector_pushback(t_vector *vec, CONTENT item);
 void		vector_delete_bypos(t_vector *vec, size_t pos);
 void		vector_delete_byval(t_vector *vec, CONTENT item);
 
+void		vector_sort(t_vector *vec);
+
 #endif //VECTOR_H
