@@ -6,6 +6,8 @@
 #include <limits.h>
 #include <stdio.h>
 
+int g_ops;
+
 void	swap(CONTENT* a, CONTENT* b)
 {
 	int tmp;
@@ -32,6 +34,7 @@ static void	reinsert(t_vector* vec, size_t index)
 
 	desired_pos = find_desired_position(vec, value);
 	while (index > desired_pos) {
+		g_ops++;
 		vec->arr[index] = vec->arr[index - 1];
 		--index;
 	}
@@ -43,10 +46,12 @@ void	vector_sort(t_vector *vec)
 	size_t	i;
 
 	i = 1;
+	g_ops = 0;
 	while (i < vec->size)
 	{
 		if (vec->arr[i] < vec->arr[i - 1])
 			reinsert(vec, i);
 		++i;
 	}
+	dprintf(2, "g_ops is %d\n", g_ops);
 }
