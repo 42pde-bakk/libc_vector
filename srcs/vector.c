@@ -44,3 +44,17 @@ void	vector_pushback(t_vector *vec, CONTENT item)
 	vec->arr[vec->size] = item;
 	++vec->size;
 }
+
+ssize_t	vector_find_by_value(t_vector *vec, CONTENT to_find)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < vec->size)
+	{
+		if (vec->arr[i] == to_find)
+			return ((ssize_t)i);
+		++i;
+	}
+	return (-1);
+}

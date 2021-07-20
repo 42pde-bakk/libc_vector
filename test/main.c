@@ -29,6 +29,7 @@ int	fakemain(void)
 		printf("vec[%d]: {%d}\n", i, vec->arr[i]);
 		++i;
 	}
+	printf("vector has item %d at index %zd\n", 20, vector_find_by_value(vec, 20));
 	vector_destroy(vec);
 	return (0);
 }
