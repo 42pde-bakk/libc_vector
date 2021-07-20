@@ -5,7 +5,6 @@
 #include "vector.h"
 #include "../include_internal/utils.h"
 #include <stdlib.h>
-#include <sys/types.h>
 
 static void	vector_realloc(t_vector *vec, size_t newsize)
 {

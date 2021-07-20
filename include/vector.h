@@ -5,6 +5,7 @@
 #ifndef VECTOR_H
 # define VECTOR_H
 # include <stdlib.h>
+# include <sys/types.h>
 
 # ifndef CONTENT
 #  define CONTENT int
