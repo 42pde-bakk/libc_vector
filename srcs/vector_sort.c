@@ -5,21 +5,15 @@
 #include "vector.h"
 #include <stdio.h>
 
-void	swap(CONTENT *a, CONTENT *b)
-{
-	const int	tmp = *a;
-
-	*a = *b;
-	*b = tmp;
-}
-
 static size_t	find_desired_position(t_vector *vec, CONTENT nb)
 {
 	size_t	i;
 
 	i = 0;
 	while (vec->arr[i] < nb)
+	{
 		++i;
+	}
 	return (i);
 }
 
@@ -45,7 +39,9 @@ void	vector_sort(t_vector *vec)
 	while (i < vec->size)
 	{
 		if (vec->arr[i] < vec->arr[i - 1])
+		{
 			reinsert(vec, i);
+		}
 		++i;
 	}
 }

@@ -4,7 +4,6 @@
 
 #include "vector.h"
 #include <stdio.h>
-#include <unistd.h>
 
 int	fakemain(void)
 {
