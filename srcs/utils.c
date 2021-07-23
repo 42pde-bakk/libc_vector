@@ -12,16 +12,6 @@ static void	fatal_error(const char *s)
 	exit(EXIT_FAILURE);
 }
 
-void	*malloc_wrapper(size_t size)
-{
-	void	*out;
-
-	out = malloc(size);
-	if (!out)
-		fatal_error("Error");
-	return (out);
-}
-
 void	*calloc_wrapper(size_t nmemb, size_t size)
 {
 	void	*out;
