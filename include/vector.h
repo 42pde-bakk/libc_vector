@@ -28,4 +28,5 @@ void		vector_delete_byval(t_vector *vec, CONTENT item);
 ssize_t		vector_find_by_value(t_vector *vec, CONTENT to_find);
 void		vector_sort(t_vector *vec);
 
-#endif //VECTOR_H
+//VECTOR_H
+#endif
