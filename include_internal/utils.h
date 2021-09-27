@@ -8,4 +8,5 @@
 void	fatal_error(const char *s);
 void	*calloc_wrapper(size_t nmemb, size_t size);
 
-#endif //UTILS_H
+//UTILS_H
+#endif
