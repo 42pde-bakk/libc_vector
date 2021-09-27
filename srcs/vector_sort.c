@@ -5,7 +5,7 @@
 #include "vector.h"
 #include <stdio.h>
 
-static size_t	find_desired_position(t_vector *vec, CONTENT nb)
+static size_t	find_desired_position(t_vector *vec, const CONTENT nb)
 {
 	size_t	i;
 
@@ -28,7 +28,7 @@ static void	reinsert(t_vector *vec, size_t index)
 		vec->arr[index] = vec->arr[index - 1];
 		--index;
 	}
-	vec->arr[desired_pos] = value;
+	vec->arr[desired_pos] = (CONTENT)value;
 }
 
 void	vector_sort(t_vector *vec)
