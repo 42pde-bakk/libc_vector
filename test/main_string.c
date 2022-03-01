@@ -1,6 +1,14 @@
-//
-// Created by peerdebakker on 14-04-21.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main_string.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pde-bakk <pde-bakk@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/01 14:52:37 by pde-bakk          #+#    #+#             */
+/*   Updated: 2022/03/01 14:52:42 by pde-bakk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "vector.h"
 #include <stdio.h>
@@ -8,7 +16,7 @@
 int	fakemain(void)
 {
 	static char *const	strs[] = {
-			"RA", "RB", "SA", "SB", "SSA", "SSB"
+		"RA", "RB", "SA", "SB", "SSA", "SSB"
 	};
 	t_vector			*vec;
 	int					i;
